@@ -231,6 +231,9 @@ List<Lesson> getLessons() => [
               "all possible paths. A* is faster than using dijkstra and uses best-first-search to speed things up. A* is basically an informed variation of Dijkstra. "),
       Lesson(
           title: "Bellman–Ford algorithm",
+          
+          title: "Johnson's algorithm",
+          level: "Advanced",
           indicatorValue: 1.0,
           complexity: "O(V²log V + VE)",
           complexityDetails: "V-number of vertices\nE-number of edges",
