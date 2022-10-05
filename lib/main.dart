@@ -231,23 +231,6 @@ List<Lesson> getLessons() => [
               "all possible paths. A* is faster than using dijkstra and uses best-first-search to speed things up. A* is basically an informed variation of Dijkstra. "),
       Lesson(
           title: "Bellman–Ford algorithm",
-          level: "Beginner",
-          indicatorValue: 0.4,
-          complexity: "O(V*E)",
-          complexityDetails: "V-number of vertices\nE-number of edges",
-          icon: Icon(Icons.network_check, color: Colors.white),
-          usages: "Network routing\nMoney exchange manipulation",
-          simulationDetails: 7,
-          additionalInformation: 11,
-          algorithmTemplate: AlgorithmTemplate.graph,
-		  algorithmType: AlgorithmTypes.pathFinding,
-          content:
-		  "The Bellman–Ford algorithm is an algorithm that computes shortest paths from a single source vertex to all of the other vertices in a weighted digraph. It is slower than Dijkstra's algorithm for the same problem, but more "
-              "versatile, as it is capable of handling graphs in which some of the edge weights are negative numbers.Bellman-Ford works better (better than Dijksra’s) for distributed systems. Unlike Dijksra’s where we need to find minimum "
-			  "value of all vertices, in Bellman-Ford, edges are considered one by one."),
-      Lesson(
-          title: "Floyd-Warshall algorithm",
-          level: "Hard",
           
           title: "Johnson's algorithm",
           level: "Advanced",
