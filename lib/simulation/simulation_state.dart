@@ -1,3 +1,5 @@
+	  animationController.forward();
+  }
 
   @override
   Widget build(BuildContext context) {
