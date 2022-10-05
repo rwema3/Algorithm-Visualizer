@@ -11,6 +11,22 @@ class MyApp extends StatelessWidget {
   final Controllers _controllers = Controllers();
 
   @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'Flutter Demo',
+      theme: new ThemeData(
+        primaryColor: Color.fromRGBO(58, 66, 86, 1.0),
+        fontFamily: 'Raleway',
+        primaryColorBrightness: Brightness.dark,
+      ),
+
+      home: new ListPage(
+        controllers: _controllers,
+      ),
+      // home: DetailPage(),
+    );
+  }
+}
 
 
 /* sources>
