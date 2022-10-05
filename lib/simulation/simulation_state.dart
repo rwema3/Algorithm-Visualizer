@@ -1,5 +1,3 @@
-		  duration: Duration(seconds: 1),
-	  )
 		  ..addListener(() => setState(() {}));
 
 	  animation = Tween<double>(
