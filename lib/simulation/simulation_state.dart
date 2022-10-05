@@ -1,4 +1,3 @@
-      ..onTapUp = (TapUpDetails details) {
         try {
 			simulation.abstractSimulationExecutor.handleTap(details.globalPosition, _controllers.scrollController.offset);
         } catch (Exception) {
