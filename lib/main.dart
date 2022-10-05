@@ -231,16 +231,7 @@ List<Lesson> getLessons() => [
               "all possible paths. A* is faster than using dijkstra and uses best-first-search to speed things up. A* is basically an informed variation of Dijkstra. "),
       Lesson(
           title: "Bellman–Ford algorithm",
-          indicatorValue: 1.0,
-          complexity: "O(V²log V + VE)",
-          complexityDetails: "V-number of vertices\nE-number of edges",
-          icon: Icon(Icons.computer, color: Colors.white),
-          usages: "optimized CPU computing",
-          simulationDetails: 7,
-          additionalInformation: 11,
-          algorithmTemplate: AlgorithmTemplate.graph,
-		  algorithmType: AlgorithmTypes.pathFinding,
-          content:
+          
 		  "Johnson's algorithm is a way to find the shortest paths between all pairs of vertices in a edge-weighted, directed graph. It allows some of the edge weights to be negative numbers, but no negative-weight cycles may exist. "
 			  "First, a new node q is added to the graph, connected by zero-weight edges to each of the other nodes.Second, the Bellman–Ford algorithm is used, starting from the new vertex q, to find for each vertex v the minimum weight "
 			  "h(v) of a path from q to v. If this step detects a negative cycle, the algorithm is terminated. Next the edges of the original graph are reweighted using the values computed by the Bellman–Ford algorithm: an edge from u to v,"
