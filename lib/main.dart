@@ -123,14 +123,6 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
 			itemCount: AlgorithmTypes.values.length,
           itemBuilder: (BuildContext context, int index) {
             return IconButton(
-				icon: Icon(
-					AlgorithmTypes.values[index].getIcon(),
-					color: activePage == index ? Colors.green : Colors.white,
-					semanticLabel: 'Show menu',
-				),
-              onPressed: () {
-				  if (activePage != index) {
-					  setState(() {
 
 
 /* sources>
