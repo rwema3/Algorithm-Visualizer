@@ -231,15 +231,6 @@ List<Lesson> getLessons() => [
               "all possible paths. A* is faster than using dijkstra and uses best-first-search to speed things up. A* is basically an informed variation of Dijkstra. "),
       Lesson(
           title: "Bellman–Ford algorithm",
-          usages: "Paint\nGo and Minesweeper",
-          simulationDetails: 0,
-          additionalInformation: 0,
-          algorithmTemplate: AlgorithmTemplate.maze,
-		  algorithmType: AlgorithmTypes.pathFinding,
-          content:
-		  "Flood fill, also called seed fill, is an algorithm that determines the area connected to a given node in a multi-dimensional array. It is used in the 'bucket' fill tool of paint programs to fill connected, similarly-colored "
-              "areas with a different color, and in games such as Go and Minesweeper for determining which pieces are cleared."),
-      Lesson(
           title: "Four color theorem",
           level: "Advanced",
           indicatorValue: 1.0,
