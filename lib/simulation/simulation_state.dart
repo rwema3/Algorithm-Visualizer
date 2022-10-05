@@ -1,22 +1,3 @@
-                    onChanged: (value) {
-						setState(() => simulation.abstractSimulationExecutor.speedFactor = value.floor());
-                    },
-					  value: simulation.abstractSimulationExecutor.speedFactor.floorToDouble(),
-                  ),
-                ),
-                Container(
-                  width: 60.0,
-                  alignment: Alignment.centerLeft,
-					child: Text('${simulation.abstractSimulationExecutor.speedFactor}', style: Theme
-						.of(context)
-						.textTheme
-						.display1),
-                ),
-              ],
-            ))
-      ],
-    );
-  }
 
   Container buildSimulator(BuildContext context) {
 	  return Container(padding: EdgeInsets.fromLTRB(30.0, 24.0, 30.0, 24.0), width: MediaQuery
