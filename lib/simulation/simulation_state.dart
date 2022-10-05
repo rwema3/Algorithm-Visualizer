@@ -1,8 +1,3 @@
-			  child: buildListView(context),
-		  ),
-      ),
-    );
-  }
 
   ListView buildListView(BuildContext context) {
 	  simulation.lesson.setState = setState;
