@@ -231,7 +231,21 @@ List<Lesson> getLessons() => [
               "all possible paths. A* is faster than using dijkstra and uses best-first-search to speed things up. A* is basically an informed variation of Dijkstra. "),
       Lesson(
           title: "Bellman–Ford algorithm",
-          
+          title: "Four color theorem",
+          level: "Advanced",
+          indicatorValue: 1.0,
+          complexity: "NP-complete",
+          complexityDetails: "Solution has not yet been mathematically proven.",
+          icon: Icon(Icons.map, color: Colors.white),
+          usages: "Mensuring that two mobile phone masts that overlap has a different frequency.",
+          simulationDetails: 6,
+          additionalInformation: 0,
+          algorithmTemplate: AlgorithmTemplate.graph,
+		  algorithmType: AlgorithmTypes.proofOfConcept,
+          content:
+		  "In mathematics, the four color theorem states that, given any separation of a plane into contiguous regions, producing a figure called a map, no more than four colors are required to color the regions of the map so that no "
+              "two adjacent regions have the same color.")
+    ];
 
 /* sources>
 
