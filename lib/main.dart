@@ -194,6 +194,12 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
       itemBuilder: (BuildContext context, int listIndex) {
         return makeCard(listLessons[listIndex]);
       },
+    );
+  }
+}
+
+List<Lesson> getLessons() => [
+      Less
 
 /* sources>
 
