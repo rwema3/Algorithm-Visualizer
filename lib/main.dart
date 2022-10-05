@@ -184,16 +184,7 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
   ListView buildListView(Card makeCard(Lesson lesson), int index) {
     List<Lesson> listLessons = getLessons();
     listLessons.sort((a, b) => a.getSortingOrder().compareTo(b.getSortingOrder()));
-    if (index != 0) {
-		listLessons = listLessons.where((f) => f.algorithmType == AlgorithmTypes.values[index]).toList();
-    }
-    return ListView.builder(
-      scrollDirection: Axis.vertical,
-      shrinkWrap: true,
-      itemCount: listLessons.length,
-      itemBuilder: (BuildContext context, int listIndex) {
-        return makeCard(listLessons[listIndex]);
-      },
+    if (
 
 /* sources>
 
