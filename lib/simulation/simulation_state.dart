@@ -1,4 +1,14 @@
 
+			Container(
+				child: new Text(
+					simulation.lesson.stateDescription,
+					style: TextStyle(color: Colors.black),
+				),
+			)
+		],
+    );
+  }
+}
 
 class GameWrapper extends StatefulWidget {
   final SimulationAlgorithm simulation;
