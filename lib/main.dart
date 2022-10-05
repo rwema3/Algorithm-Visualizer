@@ -85,6 +85,16 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
           },
         );
 
+    Card makeCard(Lesson lesson) => Card(
+          elevation: 8.0,
+          margin: new EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
+          child: Container(
+            decoration: BoxDecoration(color: Color.fromRGBO(64, 75, 96, .9)),
+            child: makeListTile(lesson),
+          ),
+        );
+
+	final List<AnimationController> appBarIconAnimationController = new List<AnimationController>.generate(1, (int index) => AnimationController(vsync: this, duration: new Duration(seconds: 1)));
 
 
 /* sources>
