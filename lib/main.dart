@@ -163,10 +163,6 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
 			},
         ),
       ],
-    );
-
-    return Scaffold(
-      backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
    
 
 /* sources>
