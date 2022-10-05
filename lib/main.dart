@@ -231,20 +231,6 @@ List<Lesson> getLessons() => [
               "all possible paths. A* is faster than using dijkstra and uses best-first-search to speed things up. A* is basically an informed variation of Dijkstra. "),
       Lesson(
           title: "Bellman–Ford algorithm",
-          
-		  "Johnson's algorithm is a way to find the shortest paths between all pairs of vertices in a edge-weighted, directed graph. It allows some of the edge weights to be negative numbers, but no negative-weight cycles may exist. "
-			  "First, a new node q is added to the graph, connected by zero-weight edges to each of the other nodes.Second, the Bellman–Ford algorithm is used, starting from the new vertex q, to find for each vertex v the minimum weight "
-			  "h(v) of a path from q to v. If this step detects a negative cycle, the algorithm is terminated. Next the edges of the original graph are reweighted using the values computed by the Bellman–Ford algorithm: an edge from u to v,"
-			  " having length w(u,v) w(u,v), is given the new length w(u,v) + h(u) − h(v).Finally, q is removed, and Dijkstra's algorithm is used to find the shortest paths from each node s to every other vertex in the reweighted graph. Johnson's algorithm is very "
-              "similar to the Floyd-Warshall algorithm; however, Floyd-Warshall is most effective for dense graphs (many edges), while Johnson's algorithm is most effective for sparse graphs (few edges). Proposed algorithmic and architectural"
-			  " optimizations results in more than 4.5 times speed up of all-pairs shortest path calculation for large graphs with respect to the CPU."),
-      Lesson(
-          title: "Flood fill algorithm",
-          level: "Basic",
-          indicatorValue: 0.2,
-          complexity: "O(N²)",
-          complexityDetails: "N-number of nodes",
-          icon: Icon(Icons.format_paint, color: Colors.white),
           usages: "Paint\nGo and Minesweeper",
           simulationDetails: 0,
           additionalInformation: 0,
