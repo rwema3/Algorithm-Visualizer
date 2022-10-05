@@ -1,6 +1,3 @@
-
-	  animationController = AnimationController(
-		  vsync: this,
 		  duration: Duration(seconds: 1),
 	  )
 		  ..addListener(() => setState(() {}));
