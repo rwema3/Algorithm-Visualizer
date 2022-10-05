@@ -143,8 +143,6 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
       ),
     );
 
-    final topAppBar = AppBar(
-  
 
 /* sources>
 
