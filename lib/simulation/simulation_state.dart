@@ -1,6 +1,3 @@
-        try {
-			simulation.abstractSimulationExecutor.handleTap(details.globalPosition, _controllers.scrollController.offset);
-        } catch (Exception) {
 			simulation.abstractSimulationExecutor.handleTap(details.globalPosition, 0);
         }
       });
