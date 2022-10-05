@@ -1,3 +1,15 @@
+
+  Column buildSlider(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Container(
+          alignment: Alignment.topLeft,
+          padding: EdgeInsets.symmetric(horizontal: 32.0),
+          child: Text(
+            'Simulation speed:',
+            style: TextStyle(color: Colors.black),
+          ),
+        ),
         Container(
             width: MediaQuery.of(context).size.width,
             padding: EdgeInsets.symmetric(horizontal: 16.0),
