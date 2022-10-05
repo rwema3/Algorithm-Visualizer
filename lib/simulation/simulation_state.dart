@@ -1,3 +1,6 @@
+
+  ListView buildListView(BuildContext context) {
+	  simulation.lesson.setState = setState;
 	  List<Widget> widgets = <Widget>[buildAppBar(context), buildDivider(context), buildSimulator(context), buildSlider(context), buildContainer()];
 
 	  ListView listView = ListView.builder(
