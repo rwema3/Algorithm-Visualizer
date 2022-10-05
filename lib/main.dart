@@ -248,15 +248,6 @@ List<Lesson> getLessons() => [
       Lesson(
           title: "Floyd-Warshall algorithm",
           level: "Hard",
-          indicatorValue: 0.8,
-          complexity: "O(N³)",
-          complexityDetails: "N-number of nodes",
-          icon: Icon(Icons.wifi, color: Colors.white),
-          additionalInformation: 11,
-          usages: "Maximum Bandwidth Paths in Flow Networks.\nInversion of real matrices.\nFast computation of Pathfinder networks\nArbitrage",
-          simulationDetails: 7,
-          algorithmTemplate: AlgorithmTemplate.graph,
-		  algorithmType: AlgorithmTypes.pathFinding,
           
           title: "Johnson's algorithm",
           level: "Advanced",
