@@ -1,5 +1,3 @@
-	  ListView listView = ListView.builder(
-		  controller: _controllers.scrollController,
 		  itemCount: widgets.length,
 		  itemBuilder: (BuildContext context, int index) {
 			  return widgets[index];
