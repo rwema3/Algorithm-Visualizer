@@ -1,17 +1,5 @@
 
 
-  Container buildDivider(BuildContext context) {
-    return Container(
-      width: 90.0,
-		padding: EdgeInsets.fromLTRB(24, 0, MediaQuery
-			.of(context)
-			.size
-			.width - 48 - 90, 0),
-      alignment: Alignment.centerLeft,
-      child: new Divider(color: Colors.green),
-    );
-  }
-
   Row buildAppBar(BuildContext context) {
     return Row(
 		mainAxisAlignment: MainAxisAlignment.start,
