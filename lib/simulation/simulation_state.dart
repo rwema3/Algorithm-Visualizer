@@ -1,3 +1,7 @@
+		  begin: 0.0,
+		  end: 1.0,
+	  ).animate(animationController);
+
 	  animationController.forward();
   }
 
