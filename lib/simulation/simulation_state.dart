@@ -1,5 +1,3 @@
-    return Scaffold(
-      body: Center(
 		  child: FadeTransition(
 			  opacity: animation,
 			  child: buildListView(context),
