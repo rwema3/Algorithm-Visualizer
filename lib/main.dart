@@ -103,15 +103,6 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
           physics: AlwaysScrollableScrollPhysics(),
           pageSnapping: true,
           scrollDirection: Axis.horizontal,
-          onPageChanged: (int newPage) {
-            setState(() {
-				setState(() {
-					activePage = newPage;
-				});
-            });
-          },
-          children: createChildren(makeCard),
-        ));
 
 
 /* sources>
