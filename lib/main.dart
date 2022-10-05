@@ -96,14 +96,6 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
 
 	final List<AnimationController> appBarIconAnimationController = new List<AnimationController>.generate(1, (int index) => AnimationController(vsync: this, duration: new Duration(seconds: 1)));
 
-    final makeBody = Container(
-        decoration: BoxDecoration(color: Color.fromRGBO(58, 66, 86, 1.0)),
-        child: PageView(
-          controller: _controllers.pageController,
-          physics: AlwaysScrollableScrollPhysics(),
-          pageSnapping: true,
-          scrollDirection: Axis.horizontal,
-
 
 /* sources>
 
