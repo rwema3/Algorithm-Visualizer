@@ -35,6 +35,20 @@ class ListPage extends StatefulWidget {
 
   @override
   _ListPageState createState() => _ListPageState(controllers);
+}
+
+class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
+  final Controllers _controllers;
+  int activePage = 0;
+
+  _ListPageState(this._controllers);
+
+  @override
+  Widget build(BuildContext context) {
+    ListTile makeListTile(Lesson lesson) => ListTile(
+		contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+          leading: Container(
+            padding: EdgeInsets.only(right: 12.0),
 
 
 /* sources>
