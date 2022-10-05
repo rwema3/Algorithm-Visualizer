@@ -1,3 +1,5 @@
+		  child: FadeTransition(
+			  opacity: animation,
 			  child: buildListView(context),
 		  ),
       ),
