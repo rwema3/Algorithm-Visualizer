@@ -1,3 +1,5 @@
+			simulation.abstractSimulationExecutor.handleTap(details.globalPosition, 0);
+        }
       });
   }
 
