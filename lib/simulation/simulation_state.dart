@@ -1,3 +1,5 @@
+  Game(this.simulation, this._controllers) {
+    Flame.util.addGestureRecognizer(_controllers.gestureController
       ..onTapUp = (TapUpDetails details) {
         try {
 			simulation.abstractSimulationExecutor.handleTap(details.globalPosition, _controllers.scrollController.offset);
