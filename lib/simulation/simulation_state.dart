@@ -1,17 +1,3 @@
-        Container(
-            width: MediaQuery.of(context).size.width,
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Flexible(
-                  flex: 1,
-                  fit: FlexFit.tight,
-                  child: Slider(
-                    activeColor: Colors.green,
-                    min: 0.0,
-                    max: 10.0,
-					  divisions: 1000,
                     onChanged: (value) {
 						setState(() => simulation.abstractSimulationExecutor.speedFactor = value.floor());
                     },
