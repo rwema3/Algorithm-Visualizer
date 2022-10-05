@@ -12,3 +12,5 @@ Flutter path finding visualizer
     * A-star algorithm
     * Floyd-Warshall algorithm
     * Johnson's algorithm
+	
+# Developer: Bagirishya D. Rwema
