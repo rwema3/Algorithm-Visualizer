@@ -218,19 +218,6 @@ List<Lesson> getLessons() => [
           title: "A-star algorithm",
           level: "Intermediate",
           indicatorValue: 0.6,
-          complexity: "O(b^d)",
-          complexityDetails: "d-shortest path\nb-branching factor",
-          icon: Icon(Icons.directions_bus, color: Colors.white),
-          usages: "Finding the shortest route (GPS)",
-          simulationDetails: 7,
-          additionalInformation: 3,
-          algorithmTemplate: AlgorithmTemplate.graph,
-		  algorithmType: AlgorithmTypes.pathFinding,
-          content:
-		  "A* is just like Dijkstra, the only difference is that A* tries to look for a better path by using a heuristic function which gives priority to nodes that are supposed to be better than others while Dijkstra's just explore "
-              "all possible paths. A* is faster than using dijkstra and uses best-first-search to speed things up. A* is basically an informed variation of Dijkstra. "),
-      Lesson(
-          title: "Bellman–Ford algorithm",
           
 
 /* sources>
