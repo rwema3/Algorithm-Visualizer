@@ -1,3 +1,8 @@
+		  itemCount: widgets.length,
+		  itemBuilder: (BuildContext context, int index) {
+			  return widgets[index];
+		  },
+	  );
 	  simulation.controller = _controllers.scrollController;
 	  return listView;
   }
