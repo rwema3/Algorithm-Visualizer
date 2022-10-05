@@ -1,4 +1,18 @@
 
+
+  Row buildAppBar(BuildContext context) {
+    return Row(
+		mainAxisAlignment: MainAxisAlignment.start,
+		children: <Widget>[
+			Container(
+				padding: EdgeInsets.symmetric(horizontal: 24),
+				child: InkWell(
+					onTap: () {
+						Navigator.pop(context);
+					},
+					child: Icon(Icons.arrow_back, color: Colors.black, size: 24),
+				),
+			),
 			Container(
 				child: new Text(
 					simulation.lesson.stateDescription,
