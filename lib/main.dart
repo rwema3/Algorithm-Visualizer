@@ -131,11 +131,6 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
               onPressed: () {
 				  if (activePage != index) {
 					  setState(() {
-						  activePage = index;
-					  });
-				  }
-				  _controllers.pageController.animateToPage(activePage, duration: Duration(seconds: 1), curve: Curves.ease);
-				  //toggleIcon(activePage + _controllers.iconAnimationControllerPositionShift);
 
 
 /* sources>
