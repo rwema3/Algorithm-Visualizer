@@ -148,19 +148,7 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
       backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
 		title: Text(AlgorithmTypes.values[activePage].getAlgorithmToString()),
       actions: <Widget>[
-        IconButton(
-			icon: AnimatedIcon(
-				icon: AnimatedIcons.menu_close,
-				semanticLabel: 'Show menu',
-				progress: appBarIconAnimationController[0],
-			),
-			onPressed: () {
-				if (appBarIconAnimationController[0].isAnimating || appBarIconAnimationController[0].isCompleted) {
-					appBarIconAnimationController[0].reverse();
-				} else {
-					appBarIconAnimationController[0].forward();
-				}
-	
+  
 
 /* sources>
 
