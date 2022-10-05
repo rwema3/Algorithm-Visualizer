@@ -1,5 +1,3 @@
-	  List<Widget> widgets = <Widget>[buildAppBar(context), buildDivider(context), buildSimulator(context), buildSlider(context), buildContainer()];
-
 	  ListView listView = ListView.builder(
 		  controller: _controllers.scrollController,
 		  itemCount: widgets.length,
