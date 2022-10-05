@@ -199,7 +199,17 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
 }
 
 List<Lesson> getLessons() => [
-      Less
+      Lesson(
+          title: "Dijkstra's algorithm",
+          level: "Basic",
+          indicatorValue: 0.2,
+          complexity: "O(N²)",
+          complexityDetails: "N-number of nodes",
+          icon: Icon(Icons.directions_car, color: Colors.white),
+          usages: "Single-source shortest path in a graph",
+          simulationDetails: 7,
+          additionalInformation: 3,
+          
 
 /* sources>
 
