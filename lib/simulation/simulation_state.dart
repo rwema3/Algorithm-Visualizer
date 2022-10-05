@@ -1,9 +1,3 @@
-class Game extends State<GameWrapper> with TickerProviderStateMixin {
-  final SimulationAlgorithm simulation;
-  final Controllers _controllers;
-  AnimationController animationController;
-  Animation<double> animation;
-
   Game(this.simulation, this._controllers) {
     Flame.util.addGestureRecognizer(_controllers.gestureController
       ..onTapUp = (TapUpDetails details) {
