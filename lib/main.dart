@@ -160,7 +160,10 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
 				} else {
 					appBarIconAnimationController[0].forward();
 				}
-	
+			},
+        ),
+      ],
+   
 
 /* sources>
 
