@@ -72,6 +72,19 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
               )
             ],
           ),
+		trailing: Icon(Icons.keyboard_arrow_right, color: Colors.white, size: 30.0),
+          onTap: () {
+			  lesson.screenSize = MediaQuery
+				  .of(context)
+				  .size
+				  .width * MediaQuery
+				  .of(context)
+				  .size
+				  .height;
+			  Navigator.push(context, MaterialPageRoute(builder: (context) => DetailPage(lesson, _controllers)));
+          },
+        );
+
 
 
 /* sources>
