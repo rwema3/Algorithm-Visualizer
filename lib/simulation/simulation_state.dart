@@ -1,3 +1,10 @@
+import 'package:AlgorithmVisualizer/controllers/Controllers.dart';
+import 'package:AlgorithmVisualizer/simulation/simulation_algorithm.dart';
+import 'package:flame/flame.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
+
 class Game extends State<GameWrapper> with TickerProviderStateMixin {
   final SimulationAlgorithm simulation;
   final Controllers _controllers;
