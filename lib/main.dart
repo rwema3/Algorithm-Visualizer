@@ -113,6 +113,13 @@ class _ListPageState extends State<ListPage> with TickerProviderStateMixin {
           children: createChildren(makeCard),
         ));
 
+    final makeBottom = Container(
+      height: 55.0,
+      child: BottomAppBar(
+        color: Color.fromRGBO(58, 66, 86, 1.0),
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+
 
 /* sources>
 
