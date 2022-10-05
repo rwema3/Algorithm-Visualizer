@@ -1,3 +1,9 @@
+      });
+  }
+
+  @override
+  void initState() {
+	  super.initState();
 
 	  animationController = AnimationController(
 		  vsync: this,
