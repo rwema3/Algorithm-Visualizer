@@ -1,4 +1,13 @@
 
+  Container buildSimulator(BuildContext context) {
+	  return Container(padding: EdgeInsets.fromLTRB(30.0, 24.0, 30.0, 24.0), width: MediaQuery
+		  .of(context)
+		  .size
+		  .width, height: MediaQuery
+		  .of(context)
+		  .size
+		  .height - 124, child: simulation.widget);
+  }
 
   Container buildDivider(BuildContext context) {
     return Container(
