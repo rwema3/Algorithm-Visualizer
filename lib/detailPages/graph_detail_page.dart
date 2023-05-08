@@ -79,4 +79,9 @@ class GraphHomePage extends HomePage {
             width: MediaQuery.of(context).size.width,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Flexible(
+                  flex: 1,
+                  child: Slider(
+                    activeColor: Colors.green,
           
