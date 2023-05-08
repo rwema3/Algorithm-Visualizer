@@ -1,0 +1,6 @@
+          children: <Widget>[getBottomContentText()],
+        ),
+      ),
+    );
+  }
+}
