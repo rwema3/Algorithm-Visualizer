@@ -185,3 +185,28 @@ class GraphHomePage extends HomePage {
             width: MediaQuery.of(context).size.width,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(getDirectedMessage(), style: TextStyle(color: Colors.black)),
+                Switch(
+                  value: askForInformation(lesson.simulationDetails, lesson.directed),
+                  onChanged: (value) {
+                    setState(() {
+                      changeSimulationDetails(lesson.directed);
+                      minMaxEdges();
+                    });
+                  },
+                  activeTrackColor: Colors.lightGreenAccent,
+                  activeColor: Colors.green,
+                ),
+              ],
+            ),
+          )
+        : Container();
+  }
+
+  String getStepMessage() {
+	  return ((askForInformation(lesson.simulationDetails, lesson.stepByStep)) ? "Step by step simulation: " : "Speed mode Simulation: ");
+  }
+
+  String getEdgesMessage() {
+    return "Number of edges:" + ((lesson.edges == minEdges()) ? "\t(min edges => always a tree)" : "");
