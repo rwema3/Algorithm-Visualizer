@@ -31,5 +31,13 @@ class GraphHomePage extends HomePage {
   }
 
   Container getNumberOfEdgesSlider(BuildContext context) {
-   
+    return askForInformation(lesson.simulationDetails, lesson.askForEdges)
+        ? Container(
+            padding: EdgeInsets.symmetric(vertical: 16.0),
+            width: MediaQuery.of(context).size.width,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Flexible(
+                  flex: 1,
    
