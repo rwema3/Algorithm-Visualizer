@@ -55,4 +55,8 @@ class GraphHomePage extends HomePage {
                 Container(
                   width: 80.0,
                   alignment: Alignment.center,
+                  child: Text('${lesson.edges.toInt()}', style: Theme.of(context).textTheme.display1),
+                ),
+              ],
+            ))
    
