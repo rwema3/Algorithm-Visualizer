@@ -14,4 +14,9 @@ class GraphHomePage extends HomePage {
 			  mainAxisAlignment: MainAxisAlignment.spaceBetween,
 			  children: <Widget>[
 				  Container(
+					  child: Text(getStepMessage(), style: TextStyle(color: Colors.black)),
+				  ),
+				  Switch(
+					  value: askForInformation(lesson.simulationDetails, lesson.stepByStep),
+					  onChanged: (value) {
 	
