@@ -146,3 +146,14 @@ class GraphHomePage extends HomePage {
               ],
             ),
           )
+        : Container();
+  }
+
+  Container getWeightedNodeSwitch(BuildContext context) {
+    return askForInformation(lesson.additionalInformation, lesson.weightLocation)
+        ? Container(
+            padding: EdgeInsets.fromLTRB(10.0, 32.0, 0.0, 0.0),
+            width: MediaQuery.of(context).size.width,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              chil
