@@ -90,4 +90,15 @@ class GraphHomePage extends HomePage {
                     onChanged: (value) {
                       setState(() => lesson.nodes = value);
                       minMaxEdges();
-           
+                    },
+                    value: lesson.nodes,
+                  ),
+                ),
+                Container(
+                  width: 60.0,
+                  alignment: Alignment.center,
+                  child: Text('${lesson.nodes.toInt()}', style: Theme.of(context).textTheme.display1),
+                ),
+              ],
+            ))
+        : C
