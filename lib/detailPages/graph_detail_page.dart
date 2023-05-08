@@ -210,3 +210,21 @@ class GraphHomePage extends HomePage {
 
   String getEdgesMessage() {
     return "Number of edges:" + ((lesson.edges == minEdges()) ? "\t(min edges => always a tree)" : "");
+  }
+
+  String getDirectedMessage() {
+    if (askForInformation(lesson.simulationDetails, lesson.directed)) {
+      return "Directed graph:";
+    }
+    return "Undirected graph:";
+  }
+
+  String getWeightedEdgeMessage() {
+    if (askForEdgeInformation()) {
+      return "Weights on edges:";
+    }
+    return "No weights on edges:";
+  }
+
+  String getWeightedNodeMessage() {
+    if (askForNodeInformation()) {
