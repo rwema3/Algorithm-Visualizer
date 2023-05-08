@@ -42,4 +42,14 @@ class GraphHomePage extends HomePage {
                   flex: 1,
                   child: Slider(
                     activeColor: Colors.green,
+                    min: minEdges(),
+                    max: maxEdges(),
+                    onChanged: (value) {
+                      setState(() {
+                        return lesson.edges = value;
+                      });
+                    },
+                    value: minMaxEdges(),
+                  ),
+                ),
    
