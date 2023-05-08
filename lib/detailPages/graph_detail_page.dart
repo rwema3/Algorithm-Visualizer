@@ -263,7 +263,8 @@ class GraphHomePage extends HomePage {
 						  child: getWeightedNodeSwitch(context),
 						  delay: delayAmount + 50,
 					  ),
-					  ShowUp(						  child: getWeightedEdgesSwitch(context),
+					  ShowUp(
+						  child: getWeightedEdgesSwitch(context),
 						  delay: delayAmount + 100,
 					  ),
 					  ShowUp(
