@@ -71,3 +71,8 @@ class GraphHomePage extends HomePage {
           )
         : Container();
   }
+
+  Container getNumberOfNodesSlider(BuildContext context) {
+    return askForInformation(lesson.simulationDetails, lesson.askForNodes)
+        ? Container(
+          
