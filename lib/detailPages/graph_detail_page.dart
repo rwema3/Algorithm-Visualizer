@@ -164,4 +164,7 @@ class GraphHomePage extends HomePage {
                     setState(() {
                       if (askForNodeInformation()) {
                         lesson.additionalInformation -= lesson.askForNodes;
+                      } else {
+                        lesson.additionalInformation += lesson.askForNodes;
+                      }
                   
