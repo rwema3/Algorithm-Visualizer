@@ -84,4 +84,10 @@ class GraphHomePage extends HomePage {
                   flex: 1,
                   child: Slider(
                     activeColor: Colors.green,
-          
+                   min: 2.0,
+                    max: 100.0,
+					  divisions: 1000,
+                    onChanged: (value) {
+                      setState(() => lesson.nodes = value);
+                      minMaxEdges();
+           
