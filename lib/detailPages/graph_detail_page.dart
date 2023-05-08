@@ -156,4 +156,12 @@ class GraphHomePage extends HomePage {
             width: MediaQuery.of(context).size.width,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              chil
+              children: <Widget>[
+                Text(getWeightedNodeMessage(), style: TextStyle(color: Colors.black)),
+                Switch(
+                  value: askForNodeInformation(),
+                  onChanged: (value) {
+                    setState(() {
+                      if (askForNodeInformation()) {
+                        lesson.additionalInformation -= lesson.askForNodes;
+                  
