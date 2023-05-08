@@ -101,4 +101,24 @@ class GraphHomePage extends HomePage {
                 ),
               ],
             ))
-        : C
+        : Container();
+  }
+
+  Container getNumberOfNodesText(BuildContext context) {
+    return askForInformation(lesson.simulationDetails, lesson.askForNodes)
+        ? Container(
+            padding: EdgeInsets.fromLTRB(10.0, 32.0, 0.0, 0.0),
+            width: MediaQuery.of(context).size.width,
+            child: Text("Number of nodes:", style: TextStyle(color: Colors.black)),
+          )
+        : Container();
+  }
+
+  Container getWeightedNotification(BuildContext context) {
+    return !askForEdgeInformation() && !askForNodeInformation() && askForInformation(lesson.additionalInformation, lesson.weightLocation)
+        ? Container(padding: EdgeInsets.fromLTRB(10.0, 32.0, 0.0, 0.0), width: MediaQuery.of(context).size.width, child: Text("I will find a path with the least nodes on path!", style: TextStyle(color: Colors.black)))
+        : Container();
+  }
+
+  Container getWeightedEdgesSwitch(BuildContext context) {
+    return 
