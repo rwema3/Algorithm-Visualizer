@@ -52,4 +52,7 @@ class GraphHomePage extends HomePage {
                     value: minMaxEdges(),
                   ),
                 ),
+                Container(
+                  width: 80.0,
+                  alignment: Alignment.center,
    
