@@ -121,4 +121,28 @@ class GraphHomePage extends HomePage {
   }
 
   Container getWeightedEdgesSwitch(BuildContext context) {
-    return 
+    return askForInformation(lesson.additionalInformation, lesson.weightLocation)
+        ? Container(
+            padding: EdgeInsets.fromLTRB(10.0, 32.0, 0.0, 0.0),
+            width: MediaQuery.of(context).size.width,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(getWeightedEdgeMessage(), style: TextStyle(color: Colors.black)),
+                Switch(
+                  value: askForEdgeInformation(),
+                  onChanged: (value) {
+                    setState(() {
+                      if (askForEdgeInformation()) {
+                        lesson.additionalInformation -= lesson.askForEdges;
+                      } else {
+                        lesson.additionalInformation += lesson.askForEdges;
+                      }
+                    });
+                  },
+                  activeTrackColor: Colors.lightGreenAccent,
+                  activeColor: Colors.green,
+                ),
+              ],
+            ),
+          )
