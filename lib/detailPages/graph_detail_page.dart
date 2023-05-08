@@ -171,7 +171,8 @@ class GraphHomePage extends HomePage {
                   },
                   activeTrackColor: Colors.lightGreenAccent,
                   activeColor: Colors.green,
-                ),              ],
+                ),
+              ],
             ),
           )
         : Container();
