@@ -171,4 +171,16 @@ class GraphHomePage extends HomePage {
                   },
                   activeTrackColor: Colors.lightGreenAccent,
                   activeColor: Colors.green,
-                ),
+                ),              ],
+            ),
+          )
+        : Container();
+  }
+
+  Container getDirectedSwitch(BuildContext context) {
+    return askForInformation(lesson.simulationDetails, lesson.askForDirection)
+        ? Container(
+            padding: EdgeInsets.fromLTRB(10.0, 32.0, 0.0, 0.0),
+            width: MediaQuery.of(context).size.width,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
