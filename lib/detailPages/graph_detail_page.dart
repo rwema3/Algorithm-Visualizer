@@ -40,4 +40,6 @@ class GraphHomePage extends HomePage {
               children: <Widget>[
                 Flexible(
                   flex: 1,
+                  child: Slider(
+                    activeColor: Colors.green,
    
