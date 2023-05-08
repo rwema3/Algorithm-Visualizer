@@ -65,4 +65,9 @@ class GraphHomePage extends HomePage {
   Container getNumberOfEdgesText(BuildContext context) {
     return askForInformation(lesson.simulationDetails, lesson.askForEdges)
         ? Container(
-   
+            padding: EdgeInsets.fromLTRB(10.0, 32.0, 0.0, 0.0),
+            width: MediaQuery.of(context).size.width,
+            child: Text(getEdgesMessage(), style: TextStyle(color: Colors.black)),
+          )
+        : Container();
+  }
