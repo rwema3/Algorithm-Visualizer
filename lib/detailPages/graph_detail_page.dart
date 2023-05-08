@@ -75,4 +75,8 @@ class GraphHomePage extends HomePage {
   Container getNumberOfNodesSlider(BuildContext context) {
     return askForInformation(lesson.simulationDetails, lesson.askForNodes)
         ? Container(
+            padding: EdgeInsets.symmetric(vertical: 16.0),
+            width: MediaQuery.of(context).size.width,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
           
