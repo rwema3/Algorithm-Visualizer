@@ -19,4 +19,10 @@ class GraphHomePage extends HomePage {
 				  Switch(
 					  value: askForInformation(lesson.simulationDetails, lesson.stepByStep),
 					  onChanged: (value) {
+						  setState(() {
+							  changeSimulationDetails(lesson.stepByStep);
+						  });
+					  },
+					  activeTrackColor: Colors.lightGreenAccent,
+					  activeColor: Colors.green,
 	
