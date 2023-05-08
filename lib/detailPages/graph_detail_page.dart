@@ -59,4 +59,10 @@ class GraphHomePage extends HomePage {
                 ),
               ],
             ))
+        : Container();
+  }
+
+  Container getNumberOfEdgesText(BuildContext context) {
+    return askForInformation(lesson.simulationDetails, lesson.askForEdges)
+        ? Container(
    
