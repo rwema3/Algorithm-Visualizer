@@ -1,3 +1,6 @@
+part of 'detail_page.dart';
+
+class EmptyHomePage extends HomePage {
   EmptyHomePage(Lesson lesson, Controllers controllers) : super(lesson, controllers);
 
   @override
