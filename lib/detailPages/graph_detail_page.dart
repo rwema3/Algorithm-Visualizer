@@ -167,4 +167,8 @@ class GraphHomePage extends HomePage {
                       } else {
                         lesson.additionalInformation += lesson.askForNodes;
                       }
-                  
+                    });
+                  },
+                  activeTrackColor: Colors.lightGreenAccent,
+                  activeColor: Colors.green,
+                ),
