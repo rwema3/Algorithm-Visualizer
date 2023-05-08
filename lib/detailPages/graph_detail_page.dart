@@ -7,4 +7,11 @@ class GraphHomePage extends HomePage {
 	  return Container(
 		  padding: EdgeInsets.symmetric(vertical: 16.0),
 		  width: MediaQuery
+			  .of(context)
+			  .size
+			  .width,
+		  child: Row(
+			  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+			  children: <Widget>[
+				  Container(
 	
