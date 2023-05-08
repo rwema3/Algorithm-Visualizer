@@ -228,3 +228,18 @@ class GraphHomePage extends HomePage {
 
   String getWeightedNodeMessage() {
     if (askForNodeInformation()) {
+      return "Weights on nodes:";
+    }
+    return "No weights on nodes:";
+  }
+
+  bool askForEdgeInformation() => lesson.additionalInformation | lesson.askForEdges == lesson.additionalInformation;
+
+  bool askForNodeInformation() => lesson.additionalInformation | lesson.askForNodes == lesson.additionalInformation;
+
+  double minMaxEdges() {
+    lesson.edges = max(min(lesson.edges, maxEdges()), minEdges());
+    return lesson.edges;
+  }
+
+  double minEdges() => (lesson.nodes - 1) * (askForInformation(lesson.simulationDetails, lesson.directed) ? 2 : 1);
