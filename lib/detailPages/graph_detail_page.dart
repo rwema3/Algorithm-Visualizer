@@ -230,4 +230,53 @@ class GraphHomePage extends HomePage {
     if (askForNodeInformation()) {
       return "Weights on nodes:";
     }
+    return "No weights on nodes:";
+  }
+
+  bool askForEdgeInformation() => lesson.additionalInformation | lesson.askForEdges == lesson.additionalInformation;
+
+  bool askForNodeInformation() => lesson.additionalInformation | lesson.askForNodes == lesson.additionalInformation;
+
+  double minMaxEdges() {
+    lesson.edges = max(min(lesson.edges, maxEdges()), minEdges());
+    return lesson.edges;
+  }
+
+  double minEdges() => (lesson.nodes - 1) * (askForInformation(lesson.simulationDetails, lesson.directed) ? 2 : 1);
+
+  double maxEdges() {
+    double max = lesson.nodes.floor() * (lesson.nodes.floor() - 1) / 2;
+    return askForInformation(lesson.simulationDetails, lesson.directed) ? max * 2 : max;
+  }
+
+  @override
+  Container bottomContent() {
+	  int delayAmount = 600;
+	  return Container(
+		  width: MediaQuery.of(context).size.width,
+		  padding: EdgeInsets.all(30.0),
+		  child: Center(
+			  child: Column(
+				  children: <Widget>[
+					  getBottomContentText(), // 600 delay goes here
+					  ShowUp(
+						  child: getWeightedNodeSwitch(context),
+						  delay: delayAmount + 50,
+					  ),
+					  ShowUp(
+						  child: getWeightedEdgesSwitch(context),
+						  delay: delayAmount + 100,
+					  ),
+					  ShowUp(
+						  child: getWeightedNotification(context),
+						  delay: delayAmount + 150,
+					  ),
+					  ShowUp(
+						  child: getDirectedSwitch(context),
+						  delay: delayAmount + 200,
+					  ),
+					  ShowUp(
+						  child: getNumberOfNodesText(context),
+						  delay: delayAmount + 250,
+					  ),
 
