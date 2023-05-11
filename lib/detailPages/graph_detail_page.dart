@@ -51,4 +51,65 @@ class GraphHomePage extends HomePage {
                     },
                     value: minMaxEdges(),
                   ),
+                ),
+                Container(
+                  width: 80.0,
+                  alignment: Alignment.center,
+                  child: Text('${lesson.edges.toInt()}', style: Theme.of(context).textTheme.display1),
+                ),
+              ],
+            ))
+        : Container();
+  }
+
+  Container getNumberOfEdgesText(BuildContext context) {
+    return askForInformation(lesson.simulationDetails, lesson.askForEdges)
+        ? Container(
+            padding: EdgeInsets.fromLTRB(10.0, 32.0, 0.0, 0.0),
+            width: MediaQuery.of(context).size.width,
+            child: Text(getEdgesMessage(), style: TextStyle(color: Colors.black)),
+          )
+        : Container();
+  }
+
+  Container getNumberOfNodesSlider(BuildContext context) {
+    return askForInformation(lesson.simulationDetails, lesson.askForNodes)
+        ? Container(
+            padding: EdgeInsets.symmetric(vertical: 16.0),
+            width: MediaQuery.of(context).size.width,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Flexible(
+                  flex: 1,
+                  child: Slider(
+                    activeColor: Colors.green,
+                    min: 2.0,
+                    max: 100.0,
+					  divisions: 1000,
+                    onChanged: (value) {
+                      setState(() => lesson.nodes = value);
+                      minMaxEdges();
+                    },
+                    value: lesson.nodes,
+                  ),
+                ),
+                Container(
+                  width: 60.0,
+                  alignment: Alignment.center,
+                  child: Text('${lesson.nodes.toInt()}', style: Theme.of(context).textTheme.display1),
+                ),
+              ],
+            ))
+        : Container();
+  }
+
+  Container getNumberOfNodesText(BuildContext context) {
+    return askForInformation(lesson.simulationDetails, lesson.askForNodes)
+        ? Container(
+            padding: EdgeInsets.fromLTRB(10.0, 32.0, 0.0, 0.0),
+            width: MediaQuery.of(context).size.width,
+            child: Text("Number of nodes:", style: TextStyle(color: Colors.black)),
+          )
+        : Container();
 
