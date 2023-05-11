@@ -178,4 +178,56 @@ class GraphHomePage extends HomePage {
         : Container();
   }
 
+  Container getDirectedSwitch(BuildContext context) {
+    return askForInformation(lesson.simulationDetails, lesson.askForDirection)
+        ? Container(
+            padding: EdgeInsets.fromLTRB(10.0, 32.0, 0.0, 0.0),
+            width: MediaQuery.of(context).size.width,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(getDirectedMessage(), style: TextStyle(color: Colors.black)),
+                Switch(
+                  value: askForInformation(lesson.simulationDetails, lesson.directed),
+                  onChanged: (value) {
+                    setState(() {
+                      changeSimulationDetails(lesson.directed);
+                      minMaxEdges();
+                    });
+                  },
+                  activeTrackColor: Colors.lightGreenAccent,
+                  activeColor: Colors.green,
+                ),
+              ],
+            ),
+          )
+        : Container();
+  }
+
+  String getStepMessage() {
+	  return ((askForInformation(lesson.simulationDetails, lesson.stepByStep)) ? "Step by step simulation: " : "Speed mode Simulation: ");
+  }
+
+  String getEdgesMessage() {
+    return "Number of edges:" + ((lesson.edges == minEdges()) ? "\t(min edges => always a tree)" : "");
+  }
+
+  String getDirectedMessage() {
+    if (askForInformation(lesson.simulationDetails, lesson.directed)) {
+      return "Directed graph:";
+    }
+    return "Undirected graph:";
+  }
+
+  String getWeightedEdgeMessage() {
+    if (askForEdgeInformation()) {
+      return "Weights on edges:";
+    }
+    return "No weights on edges:";
+  }
+
+  String getWeightedNodeMessage() {
+    if (askForNodeInformation()) {
+      return "Weights on nodes:";
+    }
 
