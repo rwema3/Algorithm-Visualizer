@@ -279,4 +279,29 @@ class GraphHomePage extends HomePage {
 						  child: getNumberOfNodesText(context),
 						  delay: delayAmount + 250,
 					  ),
-
+					  ShowUp(
+						  child: getNumberOfNodesSlider(context),
+						  delay: delayAmount + 300,
+					  ),
+					  ShowUp(
+						  child: getNumberOfEdgesText(context),
+						  delay: delayAmount + 350,
+					  ),
+					  ShowUp(
+						  child: getNumberOfEdgesSlider(context),
+						  delay: delayAmount + 400,
+					  ),
+					  ShowUp(
+						  child: getSimulationStepSwitch(context),
+						  delay: delayAmount + 450,
+					  ),
+					  ShowUp(
+						  child: getStartButton(context),
+						  delay: delayAmount + 500,
+					  ),
+				  ],
+			  ),
+		  ),
+	  );
+  }
+}
