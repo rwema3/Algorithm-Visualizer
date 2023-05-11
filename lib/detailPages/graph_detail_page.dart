@@ -112,4 +112,70 @@ class GraphHomePage extends HomePage {
             child: Text("Number of nodes:", style: TextStyle(color: Colors.black)),
           )
         : Container();
+  }
+
+  Container getWeightedNotification(BuildContext context) {
+    return !askForEdgeInformation() && !askForNodeInformation() && askForInformation(lesson.additionalInformation, lesson.weightLocation)
+        ? Container(padding: EdgeInsets.fromLTRB(10.0, 32.0, 0.0, 0.0), width: MediaQuery.of(context).size.width, child: Text("I will find a path with the least nodes on path!", style: TextStyle(color: Colors.black)))
+        : Container();
+  }
+
+  Container getWeightedEdgesSwitch(BuildContext context) {
+    return askForInformation(lesson.additionalInformation, lesson.weightLocation)
+        ? Container(
+            padding: EdgeInsets.fromLTRB(10.0, 32.0, 0.0, 0.0),
+            width: MediaQuery.of(context).size.width,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(getWeightedEdgeMessage(), style: TextStyle(color: Colors.black)),
+                Switch(
+                  value: askForEdgeInformation(),
+                  onChanged: (value) {
+                    setState(() {
+                      if (askForEdgeInformation()) {
+                        lesson.additionalInformation -= lesson.askForEdges;
+                      } else {
+                        lesson.additionalInformation += lesson.askForEdges;
+                      }
+                    });
+                  },
+                  activeTrackColor: Colors.lightGreenAccent,
+                  activeColor: Colors.green,
+                ),
+              ],
+            ),
+          )
+        : Container();
+  }
+
+  Container getWeightedNodeSwitch(BuildContext context) {
+    return askForInformation(lesson.additionalInformation, lesson.weightLocation)
+        ? Container(
+            padding: EdgeInsets.fromLTRB(10.0, 32.0, 0.0, 0.0),
+            width: MediaQuery.of(context).size.width,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(getWeightedNodeMessage(), style: TextStyle(color: Colors.black)),
+                Switch(
+                  value: askForNodeInformation(),
+                  onChanged: (value) {
+                    setState(() {
+                      if (askForNodeInformation()) {
+                        lesson.additionalInformation -= lesson.askForNodes;
+                      } else {
+                        lesson.additionalInformation += lesson.askForNodes;
+                      }
+                    });
+                  },
+                  activeTrackColor: Colors.lightGreenAccent,
+                  activeColor: Colors.green,
+                ),
+              ],
+            ),
+          )
+        : Container();
+  }
+
 
